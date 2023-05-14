@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 14405721}
   - component: {fileID: 14405722}
   m_Layer: 9
-  m_Name: player_1
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -222,6 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eca23b1eeaa936f42b6828354d9178bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueBox: {fileID: 0}
 --- !u!61 &14405722
 BoxCollider2D:
   m_ObjectHideFlags: 0
