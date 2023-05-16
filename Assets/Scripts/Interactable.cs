@@ -9,6 +9,7 @@ public class Interactable : Collidable
     public string FlavorText;
     public string denialText;
     public string requiredItem;
+    
     public KeyCode key = KeyCode.E;
     protected override void OnCollide(Collider2D coll)
     {
@@ -19,8 +20,13 @@ public class Interactable : Collidable
 
     protected virtual void Interact()   
     {
+
+        if(!activated)
+            GameManager.instance.ShowText("" + key,25,Color.green,transform.position, Vector3.zero,.01f);
+
         if(Input.GetKeyDown(key)){
             if(activated == false) {
+            
             if(!GameManager.instance.Inventory.Contains(requiredItem)){
                 DisplayText(denialText);
                 return;
@@ -36,7 +42,7 @@ public class Interactable : Collidable
 
         }
     }
-    void DisplayText(string selectedText){
+    protected virtual void DisplayText(string selectedText){
 
         if(selectedText.Length > 0)
             {

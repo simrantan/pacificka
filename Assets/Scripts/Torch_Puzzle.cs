@@ -8,6 +8,7 @@ public class Torch_Puzzle : MonoBehaviour
     public List<GameObject> interactables;
     bool beaten = false;
     
+    public GameObject painting;
     void Start()
     {
         foreach( Transform child in transform)
@@ -29,6 +30,7 @@ public class Torch_Puzzle : MonoBehaviour
                 }
             }
             Debug.Log("Puzzle Beaten!");
+            painting.GetComponent<PuzzleInteractable>().puzzleBeaten = true;
             GameManager.instance.ShowText("You beat the puzzle!",25,Color.yellow,transform.position, Vector3.up *50,3f);
         }
         

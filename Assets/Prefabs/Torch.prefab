@@ -160,6 +160,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  activated: 0
   DialogueBox: {fileID: 0}
   FlavorText: I am a torch. There are many like me, but this one is mine. I hope
     that we can make many interesting things happen with this torch and that pacifika
@@ -183,9 +184,9 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.6
+  m_FalloffIntensity: 0.581
   m_Color: {r: 0.9056604, g: 0.45764697, b: 0.07262372, a: 1}
-  m_Intensity: 1.18
+  m_Intensity: 1.28
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000dfde1273f7755bd1adf25eb6

@@ -1195,7 +1195,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1216,7 +1216,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1224,6 +1224,27 @@ TextureImporter:
       bones: []
       spriteID: 1d08fce403dd5d94ea733cfcb5da22dc
       internalID: 1252431328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 177
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 1, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d147582f63f8ced4c83287a65c5b2fbf
+      internalID: 1619090694
       vertices: []
       indices: 
       edges: []
@@ -1258,6 +1279,7 @@ TextureImporter:
       wall_5: -1054805711
       torch_6: 421922260
       crate_2: -763694602
+      Painting: 1619090694
       healingFountain_0: -96482113
       torch_3: 1064720643
       crate_3: -1824984353
@@ -1272,9 +1294,9 @@ TextureImporter:
       wall_9: 1651944994
       torch_5: 1438648595
       torch_1: 250257708
-      floor_0: 1661898197
-      player_1: 1285329356
       column_1: -1876267522
+      player_1: 1285329356
+      floor_0: 1661898197
       column_4: -878344784
       column_3: -980880523
       wall_6: 2465415
