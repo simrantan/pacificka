@@ -78,6 +78,8 @@ public class Dialogue : MonoBehaviour
             for (int i = 0; i < lines.Length; i++){
             lines[i]= "";
             }
+            index = 0;
+            typing = false;
             Array.Resize<string>(ref lines, 1);
             
         }

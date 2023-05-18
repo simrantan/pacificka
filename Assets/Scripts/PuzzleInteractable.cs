@@ -7,7 +7,7 @@ public class PuzzleInteractable : Interactable
 
     public bool puzzleBeaten;
     // Start is called before the first frame update
-
+    public Sprite finishedPortrait;
     // Update is called once per frame
 
 
@@ -27,9 +27,15 @@ public class PuzzleInteractable : Interactable
                 DisplayText(denialText);
                 return;
             }
+            if(!puzzleBeaten) {
+                DisplayText("The portrait fits in, but i'ts still too dark to see.");
+                activated = true;
+                GetComponent<SpriteRenderer>().sprite = finishedPortrait;
+            }
             if(puzzleBeaten) {
                 DisplayText(FlavorText);
                 activated = true;
+                GetComponent<SpriteRenderer>().sprite = finishedPortrait;
             }
             
             

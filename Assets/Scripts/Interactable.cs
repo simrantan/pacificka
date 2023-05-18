@@ -9,7 +9,7 @@ public class Interactable : Collidable
     public string FlavorText;
     public string denialText;
     public string requiredItem;
-    
+    public bool turnOff = false;
     public KeyCode key = KeyCode.E;
     protected override void OnCollide(Collider2D coll)
     {
@@ -22,7 +22,7 @@ public class Interactable : Collidable
     {
 
         if(!activated)
-            GameManager.instance.ShowText("" + key,25,Color.green,transform.position, Vector3.zero,.01f);
+            GameManager.instance.ShowText("" + key,25,Color.red,transform.position, Vector3.zero,.01f);
 
         if(Input.GetKeyDown(key)){
             if(activated == false) {
@@ -35,7 +35,7 @@ public class Interactable : Collidable
             activated = true;
             
             Debug.Log("Huzzah!");
-            } else if (activated == true){
+            } else if (activated == true && turnOff){
                 activated = false;
 
             }

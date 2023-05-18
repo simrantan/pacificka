@@ -37,14 +37,14 @@ public class Player : MonoBehaviour
         }
         hit= Physics2D.BoxCast(transform.position,boxCollider.size,0,new Vector2(0,moveDelta.y),Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor","Blocking"));
         // Make sure we can move in this direction, by casting a box there first
-        if(hit.collider == null)
+        if(hit.collider == null || hit.collider.isTrigger)
         {
 
             transform.Translate(0,moveDelta.y * Time.deltaTime,0);
         }
         hit= Physics2D.BoxCast(transform.position,boxCollider.size,0,new Vector2(moveDelta.x,0),Mathf.Abs(moveDelta.x * Time.deltaTime),LayerMask.GetMask("Actor","Blocking"));
         // Make sure we can move in this direction, by casting a box there first
-        if(hit.collider == null)
+        if(hit.collider == null|| hit.collider.isTrigger)
         {
             transform.Translate(moveDelta.x * Time.deltaTime,0,0);
         }

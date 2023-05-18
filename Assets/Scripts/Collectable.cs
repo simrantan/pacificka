@@ -6,6 +6,12 @@ public class Collectable : Collidable
 {
  //Logic
     protected bool collected;
+    public string item;
+    
+    protected override void Start() {
+        base.Start();
+        boxCollider.isTrigger = true;
+    }
     protected override void OnCollide(Collider2D coll)
     {
         if(coll.name == "Player"){
@@ -15,6 +21,14 @@ public class Collectable : Collidable
 
     protected virtual void OnCollect()
     {
+        
+        if(item.Length > 0 && collected == false) {
+                    GameManager.instance.ShowText("You picked up a " +item + "!",25,Color.red,transform.position, Vector3.up *50,3f);
+                    GameManager.instance.Inventory.Add(item);
+                    item = "";
+
+                }
         collected = true;
+        gameObject.SetActive(false);
     }
 }
