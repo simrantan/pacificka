@@ -1,0 +1,3 @@
+# pacificka
+CS 247G P2
+You are a detective exploring an island uncovered by the side in the northwestern united states. Nothing is as it seems...
