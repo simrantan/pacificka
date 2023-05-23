@@ -22,7 +22,6 @@ public class Collidable : MonoBehaviour
             if(hits[i]==null){
                 continue;
             }
-
             OnCollide(hits[i]);
             // clean up the array 
             hits[i] = null;
