@@ -13,6 +13,7 @@ public class Inventory : MonoBehaviour
     private Dictionary<ItemData, InventoryItem> itemDictionary = new Dictionary<ItemData, InventoryItem>();
 
     private void OnEnable() {
+        DontDestroyOnLoad(gameObject);
         PortraitPiece.OnPieceCollected += Add;
     }
     private void OnDisable() {

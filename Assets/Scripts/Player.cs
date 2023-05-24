@@ -9,22 +9,42 @@ public class Player : MonoBehaviour
     private BoxCollider2D boxCollider;
     private Vector3 moveDelta;
     private RaycastHit2D hit;
-    
+    private Rigidbody2D rb;
+    private Vector2 moveDirection;
     public GameObject DialogueBox;
-    
+    public float moveSpeed = 0.6f;
     // Start is called before the first frame update
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
+    void FixedUpdate() {
+        Move();
+    }
+    void ProcessInputs() {
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
+        moveDirection = new Vector2(moveX,moveY);
+    }
+    void Move() {
+        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed).normalized;
+    }
     void Update()
     {
+        ProcessInputs();
+        if(GameManager.instance.player ==  null) {
+            GameManager.instance.player = this;
+        }
         if( DialogueBox.GetComponent<Dialogue>().typing){
             return;
         }
-        float x = Input.GetAxisRaw("Horizontal");
+
+        
+       /*  float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         // reset moveDelta
         moveDelta = new Vector3(x,y,0);
@@ -47,6 +67,6 @@ public class Player : MonoBehaviour
         if(hit.collider == null|| hit.collider.isTrigger)
         {
             transform.Translate(moveDelta.x * Time.deltaTime,0,0);
-        }
+        } */
     }
 }

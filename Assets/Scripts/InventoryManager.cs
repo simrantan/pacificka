@@ -6,7 +6,7 @@ public class InventoryManager : MonoBehaviour
 {
     public GameObject slotPrefab;
     public List<InventorySlot> inventorySlots = new List<InventorySlot>(12);
-    private bool minimized;
+    private bool minimized = true;
     Vector3 mini;
     Vector3 max;
 
