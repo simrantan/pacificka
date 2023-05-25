@@ -92,9 +92,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 5949860800781428838}
   lines:
-  - Hey! How are you doing
+  - A rusty, yet razor sharp blade, you can't hold it in your hand or it will cut
+    you.
   - Quite well actually, How about you?
   textSpeed: 0.1
+  typing: 1
 --- !u!1 &5949860800781428836
 GameObject:
   m_ObjectHideFlags: 0

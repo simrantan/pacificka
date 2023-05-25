@@ -167,7 +167,7 @@ MonoBehaviour:
     that we can make many interesting things happen with this torch and that pacifika
     will be a roaring success.
   denialText: I need something to light this
-  requiredItem: Match
+  requiredItem: {fileID: 11400000, guid: c5d17afc68a783241b7086fac029a554, type: 2}
   turnOff: 0
   key: 101
   animator: {fileID: 3999646110438391372}

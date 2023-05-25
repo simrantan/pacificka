@@ -10,13 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28ab1399f6e9ed74d8ca93cda0cead98, type: 3}
-  m_Name: Painting
+  m_Name: Finished Portrait
   m_EditorClassIdentifier: 
-  displayName: Painting
+  displayName: Finished portrait
   inspectText: '"A waterlogged, dirty painting piece. It is ripped and looks about
     a quarter of the entire thing.'
-  combinesWith: []
-  combine: 1
+  combinesWith:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  combinesInto: {fileID: 11400000}
+  combine: 0
   inspect: 1
   icon: {fileID: 1619090694, guid: 7d67a545b43970e4685eb15364551b58, type: 3}
   inspectImage: {fileID: 0}

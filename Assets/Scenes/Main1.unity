@@ -36887,7 +36887,7 @@ MonoBehaviour:
     this world far too soon.\u201D\u201D"
   denialText: The painting frame is empty, and it's too dark to see anything worthwile
     in the frame.
-  requiredItem: Finished Portrait
+  requiredItem: {fileID: 0}
   turnOff: 0
   key: 101
   puzzleBeaten: 0
@@ -36922,7 +36922,7 @@ GameObject:
   - component: {fileID: 444462659}
   m_Layer: 0
   m_Name: Inventory
-  m_TagString: Untagged
+  m_TagString: Inventory
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37719,6 +37719,10 @@ PrefabInstance:
       propertyPath: item
       value: Portrait Piece 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1031760157540789266, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2391493783984879505, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -37769,6 +37773,45 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
+--- !u!1 &881173247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3908070178120084414, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
+  m_PrefabInstance: {fileID: 881173246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &881173248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881173247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 926350aa1fa1c5c4980489b74de447b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  boxCollider: {fileID: 881173250}
+  item: 
+  portraitData: {fileID: 11400000, guid: 031c097270c54ad45ad062af63361fad, type: 2}
+--- !u!61 &881173250 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6775764217795491911, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
+  m_PrefabInstance: {fileID: 881173246}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &976376875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1766189153740142601, guid: 439c501fc4329ce42b7e8f9d71ae8938, type: 3}
@@ -38712,6 +38755,10 @@ PrefabInstance:
       propertyPath: item
       value: Portrait Piece 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1031760157540789266, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2391493783984879505, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -38766,6 +38813,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
+--- !u!1 &1525752447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3908070178120084414, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
+  m_PrefabInstance: {fileID: 1525752446}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1525752448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525752447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 926350aa1fa1c5c4980489b74de447b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  boxCollider: {fileID: 0}
+  item: 
+  portraitData: {fileID: 11400000, guid: bf55a2a764b7cac42a2cf9c87930ca7b, type: 2}
 --- !u!1 &1558785486
 GameObject:
   m_ObjectHideFlags: 0
@@ -39141,7 +39222,7 @@ MonoBehaviour:
   FlavorText: With a match in hand, you can make your way more easilly around the
     manor
   denialText: crates stack high and surround you.  You could use a light
-  requiredItem: Match
+  requiredItem: {fileID: 0}
   turnOff: 0
   key: 101
 --- !u!61 &1813561141
@@ -39572,7 +39653,7 @@ MonoBehaviour:
   FlavorText: Fitting the painting into the lock, door opens. You beat the test level
   denialText: '"The door swung shut behind me the moment I came in. It''s locked
     fast. There seems to be a square shaped hole in it"'
-  requiredItem: Finished Painting
+  requiredItem: {fileID: 0}
   turnOff: 0
   key: 101
 --- !u!61 &1997858906
@@ -39734,7 +39815,7 @@ MonoBehaviour:
   FlavorText: 
   denialText: '" All this to find a dead woman?  Is it just me, or is the air getting
     wetter? '
-  requiredItem: 
+  requiredItem: {fileID: 0}
   turnOff: 0
   key: 101
 --- !u!61 &2008109328
@@ -39881,7 +39962,7 @@ MonoBehaviour:
   FlavorText: '"You can finally get out of here with the finished portrait in hand"'
   denialText: '"The crates stink with the salty smell of the tide. Something resembling
     fingernail scratches can be seen on them.'
-  requiredItem: Finished Painting
+  requiredItem: {fileID: 0}
   turnOff: 0
   key: 101
 --- !u!61 &2061788600
@@ -40013,7 +40094,7 @@ MonoBehaviour:
   FlavorText: 
   denialText: The winding nature of the manor is confusing. Is this worth the scoop?
     I barely have any money left.
-  requiredItem: 
+  requiredItem: {fileID: 0}
   turnOff: 0
   key: 101
 --- !u!61 &2100382296
@@ -40210,7 +40291,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.86
+  m_Intensity: 0.31
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000dfde1273f7755bd1adf25eb6
@@ -40297,13 +40378,21 @@ PrefabInstance:
       propertyPath: item
       value: Portrait Piece 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1031760157540789266, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2391493783984879505, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2391493783984879505, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.9809
+      objectReference: {fileID: 0}
+    - target: {fileID: 2391493783984879505, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.299
+      value: -1.2975
       objectReference: {fileID: 0}
     - target: {fileID: 2391493783984879505, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -40347,6 +40436,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
+--- !u!1 &2057116808765684008 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3908070178120084414, guid: 8cceb7d8397f957449866723c13df55a, type: 3}
+  m_PrefabInstance: {fileID: 2057116808765684007}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2057116808765684009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057116808765684008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 926350aa1fa1c5c4980489b74de447b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  boxCollider: {fileID: 0}
+  item: 
+  portraitData: {fileID: 11400000, guid: 973ac776987895c4a8fdb4fdeea8271a, type: 2}
 --- !u!1001 &5949860800109274548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40516,9 +40639,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6741787417152266274, guid: 8ce4ea20b7d2a1641a951c46d17d759b, type: 3}
+      propertyPath: key
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741787417152266274, guid: 8ce4ea20b7d2a1641a951c46d17d759b, type: 3}
       propertyPath: item
       value: Match
       objectReference: {fileID: 0}
+    - target: {fileID: 6741787417152266274, guid: 8ce4ea20b7d2a1641a951c46d17d759b, type: 3}
+      propertyPath: chest_data
+      value: 
+      objectReference: {fileID: 11400000, guid: c5d17afc68a783241b7086fac029a554, type: 2}
     - target: {fileID: 6741787417152266274, guid: 8ce4ea20b7d2a1641a951c46d17d759b, type: 3}
       propertyPath: pesosAmount
       value: 50

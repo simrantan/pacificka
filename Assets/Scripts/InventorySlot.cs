@@ -77,6 +77,13 @@ public class InventorySlot : MonoBehaviour
         Debug.Log("Inventory Clicked");
     }
 
+
+    void Combine(){
+
+        
+    }
+
+
     void Update() {
         if(selected) {
             background.color = Color.blue;

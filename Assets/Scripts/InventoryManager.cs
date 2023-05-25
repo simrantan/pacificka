@@ -38,6 +38,7 @@ public class InventoryManager : MonoBehaviour
     {
         inventorySlots.Capacity = 12;
         Inventory.OnInventoryChange += DrawInventory;
+        
     }
     private void OnDisable()
     {
@@ -61,6 +62,7 @@ public class InventoryManager : MonoBehaviour
                   inventorySlots[i].DrawSlot(null);
             }
             else { 
+     
             inventorySlots[i].DrawSlot(inventory[i]);
             }
         }

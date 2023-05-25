@@ -1447,7 +1447,7 @@ TextureImporter:
         width: 16
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1455,6 +1455,27 @@ TextureImporter:
       bones: []
       spriteID: dacec2f2d3f87184e885545da192eed3
       internalID: 2055940984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door_blank
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 208
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff1dc0e5b262974cb63faa27c0d2f87
+      internalID: -1238509419
       vertices: []
       indices: 
       edges: []
@@ -1510,11 +1531,12 @@ TextureImporter:
       wall_9: 1651944994
       torch_5: 1438648595
       torch_1: 250257708
-      floor_0: 1661898197
-      player_1: 1285329356
       column_1: -1876267522
+      player_1: 1285329356
+      floor_0: 1661898197
       column_4: -878344784
       column_3: -980880523
+      door_blank: -1238509419
       wall_6: 2465415
       side_wall_0: -1069155219
       healingFountain_2: 213801401

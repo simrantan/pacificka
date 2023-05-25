@@ -8,9 +8,10 @@ public class Interactable : Collidable
     public GameObject DialogueBox;
     public string FlavorText;
     public string denialText;
-    public string requiredItem;
+    public ItemData requiredItem;
     public bool turnOff = false;
     public KeyCode key = KeyCode.E;
+    public Sprite activatedImage;
     protected override void OnCollide(Collider2D coll)
     {
         if(coll.name == "Player"){
@@ -26,12 +27,28 @@ public class Interactable : Collidable
 
         if(Input.GetKeyDown(key)){
             if(activated == false) {
-            
-            if(!GameManager.instance.Inventory.Contains(requiredItem)){
+                InventoryItem invRequired = null;
+                if(requiredItem != null) {
+                    invRequired = new InventoryItem(requiredItem);
+                }
+            bool containsItem = false;
+            if(requiredItem != null ) {
+            foreach(InventoryItem item in Inventory.inventory)
+                {
+                    if(requiredItem.displayName ==  item.itemData.displayName)
+                    {
+                        containsItem = true;
+                    }
+                }
+            }
+            if(!containsItem){
                 DisplayText(denialText);
                 return;
             }
             DisplayText(FlavorText);
+            if(activatedImage != null) {
+                GetComponent<SpriteRenderer>().sprite = activatedImage;
+            }
             activated = true;
             
             Debug.Log("Huzzah!");

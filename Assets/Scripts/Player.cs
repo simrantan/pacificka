@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
         }
 
         
-       /*  float x = Input.GetAxisRaw("Horizontal");
+        float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
         // reset moveDelta
         moveDelta = new Vector3(x,y,0);
@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
         else if (moveDelta.x < 0) {
             transform.localScale = new Vector3(-1,1,1);
         }
-        hit= Physics2D.BoxCast(transform.position,boxCollider.size,0,new Vector2(0,moveDelta.y),Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor","Blocking"));
+       /*  hit= Physics2D.BoxCast(transform.position,boxCollider.size,0,new Vector2(0,moveDelta.y),Mathf.Abs(moveDelta.y * Time.deltaTime), LayerMask.GetMask("Actor","Blocking"));
         // Make sure we can move in this direction, by casting a box there first
         if(hit.collider == null || hit.collider.isTrigger)
         {

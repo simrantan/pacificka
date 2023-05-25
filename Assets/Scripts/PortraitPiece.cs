@@ -11,8 +11,10 @@ public class PortraitPiece : Collectable
     public ItemData portraitData;
 
     protected override void OnCollect() {
+        if(collected == false) {
         OnPieceCollected?.Invoke(portraitData);
         base.OnCollect();
+        }
 
     }
 }

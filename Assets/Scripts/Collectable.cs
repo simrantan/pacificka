@@ -29,6 +29,6 @@ public class Collectable : Collidable
 
                 }
         collected = true;
-        //gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

@@ -5,19 +5,25 @@ using UnityEngine;
 public class Chest : Interactable
 {
     public Sprite emptyChest;
-    public string item = "";
-
-
+    public ItemData chest_data;
+    private bool collected;
+    public static event HandleChestOpened OnChestCollected;
+    public delegate void HandleChestOpened(ItemData itemData);
+   
     protected override void Interact() {
 
         if(!activated) {
 
              if(Input.GetKeyDown(key)){
                 GetComponent<SpriteRenderer>().sprite = emptyChest;
-                if(item.Length > 0) {
-                    GameManager.instance.ShowText("You recieved a " +item + "!",25,Color.yellow,transform.position, Vector3.up *50,3f);
-                    GameManager.instance.Inventory.Add(item);
-                    item = "";
+                if(chest_data !=  null) {
+                    GameManager.instance.ShowText("You recieved a " +chest_data.displayName + "!",25,Color.yellow,transform.position, Vector3.up *50,3f);
+                    if(collected == false)
+                    {
+                    OnChestCollected?.Invoke(chest_data);
+                    }
+                    collected = true;
+                    
                 }
                 
              }

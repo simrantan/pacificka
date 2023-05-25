@@ -7,7 +7,8 @@ public class ItemData : ScriptableObject
 {
     public string displayName;
     public string inspectText;
-    public string[] combinesWith;
+    public List<ItemData> combinesWith = new List<ItemData>();
+    public ItemData combinesInto;
     public bool combine;
     public bool inspect;
     public Sprite icon;

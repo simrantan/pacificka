@@ -22,8 +22,8 @@ public class PuzzleInteractable : Interactable
 
         if(Input.GetKeyDown(key)){
             if(activated == false) {
-            
-            if(!GameManager.instance.Inventory.Contains(requiredItem)){
+            InventoryItem invRequired = new InventoryItem(requiredItem);
+            if(!Inventory.inventory.Contains(invRequired)){
                 DisplayText(denialText);
                 return;
             }

@@ -14,10 +14,18 @@ public class Inventory : MonoBehaviour
 
     private void OnEnable() {
         DontDestroyOnLoad(gameObject);
+
         PortraitPiece.OnPieceCollected += Add;
+        Chest.OnChestCollected += Add;
+        Hedge_Interact.OnRecieveShear += Add;
+        Pickup.OnItemCollected += Add;
     }
     private void OnDisable() {
+
         PortraitPiece.OnPieceCollected -= Add;
+        Chest.OnChestCollected -= Add;
+        Hedge_Interact.OnRecieveShear -= Add;
+        Pickup.OnItemCollected -= Add;
     }
     public void Add(ItemData itemData) {
         if(itemDictionary.TryGetValue((itemData), out InventoryItem item)) {
@@ -32,17 +40,35 @@ public class Inventory : MonoBehaviour
         }
     }
     public void Remove(ItemData itemData) {
-        if(itemDictionary.TryGetValue((itemData), out InventoryItem item)) {
+    
+        InventoryItem newItem = new InventoryItem(itemData);
+        List<InventoryItem> toRemove = new List<InventoryItem>();
+        foreach(InventoryItem oldItem in inventory)
+        {
+            if(itemData.displayName ==  oldItem.itemData.displayName)
+            {
+                toRemove.Add(oldItem);
+            }
+        }
+        foreach (InventoryItem removable in toRemove)
+        {
+            inventory.Remove(removable);
+        }
+        inventory.Remove(newItem);
+        itemDictionary.Remove(itemData);
+        OnInventoryChange?.Invoke(inventory);
+        Debug.Log(inventory.Contains(newItem));
+        /* if(itemDictionary.TryGetValue((itemData), out InventoryItem item)) {
             InventoryItem newItem = new InventoryItem(itemData);
             inventory.Remove(newItem);
             itemDictionary.Remove(itemData);
             OnInventoryChange?.Invoke(inventory);
-        }
-        else 
+        } */
+        /* else 
         {
             
 
-        }
+        } */
     }
 
    

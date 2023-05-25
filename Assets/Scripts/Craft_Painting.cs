@@ -6,6 +6,7 @@ public class Craft_Painting : MonoBehaviour
 {
     // Start is called before the first frame update
     public List<string> portraitPieces;
+    //public List<InventoryItem> portraitPieces;
     void Start()
     {
         portraitPieces.Add("Portrait Piece 1");

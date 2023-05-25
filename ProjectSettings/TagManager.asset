@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Menu
+  - Inventory
+  - DialogueBox
+  - Canvas
   layers:
   - Default
   - TransparentFX
