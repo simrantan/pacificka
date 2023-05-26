@@ -9,7 +9,7 @@ public class Interactable : Collidable
     public string FlavorText;
     public string denialText;
     public ItemData requiredItem;
-    public AudioSource soundEffect;
+    public AudioSource successEffect;
     public bool turnOff = false;
     public KeyCode key = KeyCode.E;
     public Sprite activatedImage;
@@ -48,7 +48,7 @@ public class Interactable : Collidable
             }
             DisplayText(FlavorText);
             if(activatedImage != null) {
-                soundEffect.Play();
+                successEffect.Play();
                 GetComponent<SpriteRenderer>().sprite = activatedImage;
             }
             activated = true;
